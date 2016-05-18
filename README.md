@@ -25,4 +25,4 @@ Below are the functionalities that we have implemented in our system:
  Add Announcements
  List Announcements
  Add Discussions
- List Discussions
+ List Discussions.

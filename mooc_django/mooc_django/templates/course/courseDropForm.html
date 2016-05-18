@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}Drop Course{% endblock %}
+
+{%block content1 %}
+		
+		<br/><font color="red"> {{result}}</font>
+		<br/>
+
+	<form action ="http://localhost:8000/course/drop/" method="post">
+	User email :<input type= "text" readonly="yes" name="useremail" value="{{user.email}}"/><br/>	
+	Course id : <input type= "text" name="courseid" value=""/><br/>	
+        {% csrf_token %}
+	<input type= "submit" name="Submit" value="Drop Course">
+{%endblock %}
+

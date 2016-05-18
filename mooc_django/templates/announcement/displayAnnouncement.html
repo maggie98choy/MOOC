@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}Update Anouncement{% endblock %}
+
+{%block content1 %}
+		<br/><font color="red"> {{result}}</font>
+		<br/>
+	<form action ="http://localhost:8000/announcement/update/" method="post">
+	<input type= "hidden" name="addupdatestatus" value="1"/><br/>
+		
+		Course id: <input type= "text" readonly ="yes" name="courseid" value="{{courseid}}"/><br/>
+		
+		Title *: <input type= "text" name="title" value="{{title}}"/><br/>
+		
+		Description: <input type= "text" name="description" value="{{description}}"/><br/>
+		PostDate: <input type= "text" name="postDate" value="{{postDate}}"/><br/>
+		Status: <input type= "text" name="status" value="{{status}}"/><br/>
+
+	<input type= "submit" name="Submit" value="Update Announcement"> 
+	
+	</form>
+{%endblock %}
+

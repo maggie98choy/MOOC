@@ -1,0 +1,29 @@
+{% extends "login/base.html" %}
+
+{% block title %}{{title}} {% endblock %}
+
+{%block content1 %}
+<br/>{{result}}
+<br/><br/>
+
+<table border="1">
+	<tr><td>Title</td><td>Description</td><td>Unenroll</td></tr>	
+
+	{% for i in CourseList %}	
+	<tr>
+		<td>{{i.title}}</td><td>{{i.description}}</td>
+		<td><form action="http://localhost:8000/course/unenroll" method="post">
+	 	      <input type="hidden" name="title" value="{{i.title}}" />
+	 	      <input type="hidden" name="description" value="{{i.description}}" />
+	 	      <input type="hidden" name="email" value="{{email}}" />
+		      <input type="hidden" name="fname" value="{{fname}}" />
+		      <input type="submit" name="unenrollCourse" value="Unenroll"/>
+		      {% csrf_token %}
+                    </form>
+		</td>
+	</tr>
+	{% endfor %}			
+</table>
+
+{%endblock %}
+

@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html>
+<head>
+	<title> {%block title %}{% endblock %} </title>
+	
+	
+	
+
+
+</head>
+
+<body>
+	<h1>Welcome to Eureka Online Classroom </h1>
+	<br/><br/>
+
+<table>
+   <tr><td>
+	<table border="1">
+	<tr><td><font size="4">User</font></td></tr>
+	<tr><td><font size="2">&nbsp;&nbsp;&nbsp;<a href="enrollCourse.html">Enroll Course</a></font>
+	    </td>
+        </tr>
+	<tr><td><font size="2">&nbsp;&nbsp;&nbsp;<a href="dropCourse.html">Drop Course</a></font>
+            </td>
+	</tr>
+  
+	<tr><td><font size="4">Category</font></td></tr>
+	<tr><td><font size="2">&nbsp;&nbsp;&nbsp;<a href="http://localhost:8000/category/displayForm">Add Category</a></font>
+	<tr><td><font size="2">&nbsp;&nbsp;&nbsp;<a href="http://localhost:8000/category/categorySearchForm">Get Category</a></font>
+	<tr><td><font size="2">&nbsp;&nbsp;&nbsp;<a href="http://localhost:8000/category/list">List Category</a></font>
+
+
+	<tr><td><font size="4">Course</font></td></tr>
+	<tr><td><font size="2">&nbsp;&nbsp;&nbsp;<a href="http://localhost:8000/course/displayForm">Add Course</a></font>
+
+	<tr><td><font size="2">&nbsp;&nbsp;&nbsp;Get Course</font></td></tr>
+	<tr><td><font size="2">&nbsp;&nbsp;&nbsp;List Course</font></td></tr>
+	<tr><td><font size="2">&nbsp;&nbsp;&nbsp;Update Course</font></td></tr>
+	<tr><td><font size="2">&nbsp;&nbsp;&nbsp;Delete Course</font></td></tr>
+	<tr><td><font size="4">Quiz</font></td></tr>
+	<tr><td><font size="2">&nbsp;&nbsp;&nbsp;Add Quiz</font></td></tr>
+	<tr><td><font size="2">&nbsp;&nbsp;&nbsp;Get Quiz</font></td></tr>
+	<tr><td><font size="2">&nbsp;&nbsp;&nbsp;List Quiz</font></td></tr>
+	<tr><td><font size="2">&nbsp;&nbsp;&nbsp;Update Quiz</font></td></tr>
+	<tr><td><font size="2">&nbsp;&nbsp;&nbsp;Delete Quiz</font></td></tr>
+	<tr><td><font size="4">Annoucement</font></td></tr>
+	<tr><td><font size="2">&nbsp;&nbsp;&nbsp;Add Annoucement</font></td></tr>
+	<tr><td><font size="2">&nbsp;&nbsp;&nbsp;Get Annoucement</font></td></tr>
+	<tr><td><font size="2">&nbsp;&nbsp;&nbsp;List Annoucement</font></td></tr>
+	<tr><td><font size="2">&nbsp;&nbsp;&nbsp;Update Annoucement</font></td></tr>
+	<tr><td><font size="2">&nbsp;&nbsp;&nbsp;Delete Annoucement</font></td></tr>
+	<tr><td><font size="4">Discussion</font></td></tr>
+	<tr><td><font size="2">&nbsp;&nbsp;&nbsp;Add Discussion</font></td></tr>
+	<tr><td><font size="2">&nbsp;&nbsp;&nbsp;Get Discussion</font></td></tr>
+	<tr><td><font size="2">&nbsp;&nbsp;&nbsp;List Discussion</font></td></tr>
+	<tr><td><font size="2">&nbsp;&nbsp;&nbsp;Update Discussion</font></td></tr>
+	<tr><td><font size="2">&nbsp;&nbsp;&nbsp;Delete Discussion</font></td></tr>
+
+	</table>
+     </td> 
+     <td style="position:absolute;top:1"> 
+ 		{% block content1 %}{% endblock %}
+        
+     </td>
+  </tr>
+</table>
+	
+	{% block footer %}
+	<hr>
+	<p> Thanks for visiting my site! </p>
+	{% endblock %}
+</body>
+</html>

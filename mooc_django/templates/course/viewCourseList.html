@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}List Course{% endblock %}
+
+{%block content1 %}
+		<br/><font color="red"> {{result}}</font>
+		<br/>
+	<table border="1">
+	      <tr><td>Course Id</td><td>Title</td><td>Section</td>
+		<td>Department</td><td>Term</td><td>Year</td><td>Instructor Name</td>
+		<td>Hours</td><td>Description</td><td>Delete</td></tr>	
+	      
+              {% for i in CourseList %}	
+	      <tr>
+		   <form action="http://localhost:8000/course/view/delete" method="post">
+			<td>{{i.id}}</td><td>{{i.title}}</td><td>{{i.section}}</td>
+			<td>{{i.department}}</td><td>{{i.term}}</td><td>{{i.year}}</td>
+			<td>{{i.instructorname}}</td><td>{{i.hours}}</td><td>{{i.description}}</td>
+			 <input type="submit" name="deleteCourse" value="delete"/>
+		       
+		   </form>
+	      </tr>
+   	      {% endfor %}		
+	</table>
+{%endblock %}
+
+

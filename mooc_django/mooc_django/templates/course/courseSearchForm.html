@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}Search Course{% endblock %}
+
+{%block content1 %}
+		
+		<br/><font color="red"> {{result}}</font>
+		<br/>
+
+	<form action ="http://localhost:8000/course/search/" method="post">
+	Course id : <input type= "text" name="courseid" value=""/><br/>	
+        {% csrf_token %}
+	<input type= "submit" name="Submit" value="Search Course">
+{%endblock %}
+

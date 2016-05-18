@@ -1,0 +1,21 @@
+{% extends "login/base.html" %}
+
+{% block title %}{{title}} {% endblock %}
+
+{%block content1 %}
+{{result}}
+<br/><br/>
+ <form action ="http://localhost:8000/course/update/" method="post">
+	Title *: <input type= "text" name="title" value=""><br>
+	<!--Description *:      <input type="text" name="description" value=""><br>-->
+	Description *: <textarea name="description" id="description" maxlength="2500" cols="40" rows="8"></textarea>
+	
+	<input type="hidden" name="email" value="{{email}}">
+	<input type="hidden" name="fname" value="{{fname}}">
+    
+      {% csrf_token %}
+	<input type= "submit" name="Submit" value="Submit">
+ </form>
+ 
+{%endblock %}
+

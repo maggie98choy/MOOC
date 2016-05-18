@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}Search Category{% endblock %}
+
+{%block content1 %}
+		
+		<br/><font color="red"> {{result}}</font>
+		<br/>
+
+	<form action ="http://localhost:8000/category/search/" method="post">
+	Catergory id : <input type= "text" name="categoryid" value=""/><br/>	
+        {% csrf_token %}
+	<input type= "submit" name="Submit" value="Search Category">
+{%endblock %}
+

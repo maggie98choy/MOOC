@@ -1,0 +1,29 @@
+
+<!DOCTYPE HTML PUBLIC" - //W3C// DTD HTML 4.01//EN">
+<html lang="en">
+<head>
+	<title>Login</title>
+
+</head>
+<body>
+	<h1>Welcome to Eureka Online Classroom </h1>
+	<br/><br/>
+	<br/>{{result}}
+<br/><br/>
+
+ <form action ="http://localhost:8000/login/" method="post">
+	User Name: <input type= "text" name="username" value=""><br>
+	Password:      <input type="password" name="password" value=""><br>
+	{% csrf_token %}
+	<br/>
+	<input type= "submit" name="signin" value="Sign In">
+ </form>
+
+ <br/><br/>
+ 
+ <hr>
+ <p> Thanks for visiting my site! </p>
+
+</body>
+</html>
+

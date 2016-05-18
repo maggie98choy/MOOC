@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}Add Course{% endblock %}
+
+{%block content1 %}
+		<br/><font color="red"> {{result}}</font>
+		<br/>
+	<form action ="http://localhost:8000/course/add/" method="post">
+		<input type= "hidden" name="courseid" value="0"/><br/>
+		Category Id *: <input type= "text" name="categoryid" 
+				value="{{categoryid}}"/><br/>		
+		Title *: <input type= "text" name="title" value="{{title}}"/><br/>
+		Section *: <input type= "text" name="section" value="{{section}}"/><br/>
+ 		Department : <input type= "text" name="department" value="{{department}}"/><br/>
+		Term : <input type= "text" name="term" value="{{term}}"/><br/>		
+		Year : <input type= "text" name="year" value="{{year}}"/><br/>				 
+      		 
+		Instructor Name : <input type= "text" name="instructorname" value="{{instructorname}}"/><br/>				 	
+		Instructor Email : <input type= "text" name="instructoremail" value="{{instructoremail}}"/><br/>
+		
+		Hours: <input type= "text" name="hours" value="{{hours}}"/><br/>
+		Description: <input type= "text" name="description" value="{{description}}"/><br/>
+		
+		Version: <input type= "text" name="version" value="{{version}}"/><br/>
+
+<input type= "submit" name="Submit" value="Add Course"> 
+	
+	</form>
+{%endblock %}
+

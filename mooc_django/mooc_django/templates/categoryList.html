@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}List Category{% endblock %}
+
+{%block content1 %}
+		<br/><font color="red"> {{result}}</font>
+		<br/>
+	<table border="1">
+	      <tr><td>Category Id</td><td>Name</td><td>Description</td></tr>	
+	      
+              {% for i in CategoryList %}	
+	      <tr>
+		<td>{{i.id}}</td><td>{{i.name}}</td><td>{{i.description}}</td>
+	      </tr>
+   	      {% endfor %}		
+	</table>
+{%endblock %}
+
